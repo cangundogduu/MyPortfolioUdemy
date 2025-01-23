@@ -29,7 +29,7 @@
                                     <th scope="col">Mesajı Aç</th>
                                     <th scope="col">Durum</th>
                                     <th scope="col">Sil</th>
-                                    <th scope="col">Güncelle</th>
+
                                 </tr>
                             </thead>
                             <tbody>
@@ -41,7 +41,7 @@
                                         <td>@item.NameSurname</td>
                                         <td>@item.Subject</td>
                                         <td>@item.SendTime.ToShortDateString()</td>
-                                        <td><a href="/Experience/DeleteMessage/@item.MessageId" class="btn btn-warning">Mesajı Aç</a></td>
+                                        <td><a href="/Massage/MessageDetail/@item.MessageId" class="btn btn-warning">Mesajı Aç</a></td>
                                         @if (item.IsRead == true)
                                         {
                                             <td><a href="/Massage/ChangeReadToFalse/@item.MessageId" class="btn btn-dark">Okunmadı Olarak İşaretle</a></td>
@@ -50,8 +50,8 @@
                                         {
                                             <td><a href="/Massage/ChangeReadToTrue/@item.MessageId" class="btn btn-info">Okundu Olarak İşaretle</a></td>
                                         }
-                                        <td><a href="/Experience/UpdateMessage/@item.MessageId" class="btn btn-danger">Sil</a></td>
-                                        <td><a href="/Experience/UpdateMessage/@item.MessageId" class="btn btn-success">Güncelle</a></td>
+                                        <td><a href="/Massage/DeleteMessage/@item.MessageId" class="btn btn-danger">Sil</a></td>
+                                        
                                     </tr>
 
 
@@ -59,7 +59,7 @@
 
                             </tbody>
                         </table>
-                        <a href="/Experience/CreateExperience/" class="btn btn-success">Yeni Deneyim Girişi</a>
+                       
                     </div>
                 </div>
             </div>
